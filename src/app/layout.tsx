@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="https://img.freepik.com/free-vector/green-leaves-logo_78370-2096.jpg?t=st=1713371223~exp=1713374823~hmac=a0d1b54d676a9b861b827bdc3ed21453faf76ca592fafe48728c460b1583a937&w=740" />
+        <link rel="icon" href="" />
       </Head>
       <body className={inter.className}>
         <Providers>

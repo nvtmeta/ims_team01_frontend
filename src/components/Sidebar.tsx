@@ -7,9 +7,9 @@ import { PiAddressBook } from 'react-icons/pi';
 import { VscAccount } from 'react-icons/vsc';
 
 
-const dashboardPage = () => {
+const Sidebar = () => {
     return (
-        <div className="w-screen bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500 ">
+        <div className="w-1/4 bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500 ">
             <div className="h-screen w-64 pb-10">
                 <div className="flex h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg bg-white pt-5 shadow-md">
                     <div className="flex mt-10 items-center px-4">
@@ -34,52 +34,52 @@ const dashboardPage = () => {
                                 </a>
 
                                 <a href="#" className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
-                                <svg className="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <svg className="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" /> <HiMiniUserGroup className='text-2xl' />
                                     </svg>
 
 
                                     Candidate
-                                   
+
                                 </a>
 
                                 <a href="#" className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
                                     <svg className="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"  /><HiBriefcase className='text-2xl' />
+                                        <path stroke-linecap="round" stroke-linejoin="round" /><HiBriefcase className='text-2xl' />
                                     </svg>
-        
+
                                     Job
-                                
+
                                 </a>
 
                                 <a href="#" className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
                                     <svg className="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" /> <HiOutlineChatAlt2 className='text-2xl'/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" /> <HiOutlineChatAlt2 className='text-2xl' />
                                     </svg>
 
                                     Interview
-                                   
+
                                 </a>
 
                                 <a href="#" className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
                                     <svg className="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"  /> <HiOutlineClipboardList className='text-2xl' />
+                                        <path stroke-linecap="round" stroke-linejoin="round" /> <HiOutlineClipboardList className='text-2xl' />
                                     </svg>
 
                                     Offer
-                                   
+
                                 </a>
 
                                 <a href="#" className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
                                     <svg className="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"  /> <PiAddressBook className='text-2xl' />
+                                        <path stroke-linecap="round" stroke-linejoin="round" /> <PiAddressBook className='text-2xl' />
                                     </svg>
 
                                     User
-                                   
+
                                 </a>
 
-                               
+
                             </nav>
 
                             <span className="ml-3 mt-10 mb-2 block text-xs font-semibold text-gray-500">Product Mangement</span>
@@ -126,4 +126,4 @@ const dashboardPage = () => {
     )
 }
 
-export default dashboardPage
+export default Sidebar

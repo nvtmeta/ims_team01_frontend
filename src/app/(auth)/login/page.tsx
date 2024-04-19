@@ -43,7 +43,7 @@ const LoginPage = () => {
                                 <div className="flex justify-between">
                                     <label className="mb-2 inline-block text-xs font-medium uppercase text-gray-700"
                                         htmlFor="password">Password</label>
-                                    <a href="auth-forgot-password-basic.html" className="cursor-pointer text-black no-underline hover:text-blue-500">
+                                    <a href="/forgot-password" className="cursor-pointer text-black no-underline hover:text-blue-500">
                                         <small className=" ">Forgot Password?</small>
                                     </a>
                                 </div>
@@ -66,9 +66,9 @@ const LoginPage = () => {
                         </form>
 
                         <p className="mb-4 text-center">
-                        
+
                             New on futurism?
-                            <a href="#" className="cursor-pointer text-black no-underline hover:text-blue-500"> Create an account </a>
+                            <a href="/register" className="cursor-pointer text-black no-underline hover:text-blue-500"> Create an account </a>
                         </p>
                     </div>
                 </div>

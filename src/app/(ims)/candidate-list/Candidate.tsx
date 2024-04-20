@@ -43,13 +43,14 @@ const Candidate = ({ listForms }: any) => {
                     <thead>
                         <tr className="bg-gradient-to-r  from-sky-500 via-blue-500 to-indigo-500 text-left text-xs
                              font-semibold uppercase tracking-widest text-white">
-                            <th className="px-5 py-3">ID</th>
-                            <th className="px-5 py-3">Trạng thái tư vấn</th>
-                            <th className="px-5 py-3">Họ và tên</th>
-                            <th className="px-5 py-3">Số điện thoại</th>
-                            <th className="px-5 py-3">Ngày đăng ký</th>
-                            <th className="px-5 py-3">Chỉnh sửa</th>
-                            <th className="px-5 py-3">Xóa thông tin</th>
+                            <th className="px-5 py-3">No</th>
+                            <th className="px-5 py-3">Name</th>
+                            <th className="px-5 py-3">Email</th>
+                            <th className="px-5 py-3">Phone No.</th>
+                            <th className="px-5 py-3">Current Position</th>
+                            <th className="px-5 py-3">Owner HR</th>
+                            <th className="px-5 py-3">Status</th>
+                            <th className="px-5 py-3">Action</th>
                             {/* <th className="px-5 py-3">Created at</th>
             <th className="px-5 py-3">Status</th> */}
                         </tr>
@@ -62,13 +63,7 @@ const Candidate = ({ listForms }: any) => {
                                     <td className="border-b border-gray-200  px-5 py-8 text-sm">
                                         <p className="whitespace-no-wrap">{index + 1}</p>
                                     </td>
-                                    {/* isConsulted */}
-                                    <td className="border-b border-gray-200 flex items-center justify-start gap-2 px-5 py-8 text-sm">
-                                        <div className="flex items-center relative gap-3 justify-start">
-                                            sadasd
 
-                                        </div>
-                                    </td>
                                     {/* name */}
                                     <td className="border-b border-gray-200  px-5 py-8 text-sm">
                                         <div className="flex items-center gap-3 justify-start">
@@ -80,6 +75,7 @@ const Candidate = ({ listForms }: any) => {
                                             </p>
                                         </div>
                                     </td>
+
                                     {/* phone */}
                                     <td className=" border-b border-gray-200  px-5 py-8 text-sm">
                                         <div className="flex items-center gap-3 justify-start">
@@ -91,29 +87,86 @@ const Candidate = ({ listForms }: any) => {
                                             </p>
                                         </div>
                                     </td>
-                                    {/* updated date*/}
-                                    <td className=" border-b border-gray-200  px-5 py-8 text-sm">
+                                    {/* email */}
+                                    <td className="border-b border-gray-200  px-5 py-8 text-sm">
                                         <div className="flex items-center gap-3 justify-start">
-                                            <img className="w-10 h-10" src="https://cdn-icons-png.flaticon.com/128/11066/11066124.png?ga=GA1.1.1101431490.1697648101&semt=ais"
-                                                alt='updated_at' />
+
                                             <p className="font-medium   text-xl bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-400 
                                                       text-transparent bg-clip-text">
-                                                {item?.updatedData}
+                                                {item?.email}
                                             </p>
                                         </div>
                                     </td>
-                                    {/* edit */}
-                                    <td className="border-b px-5 py-8  relative flex justify-center items-center border-gray-200  text-sm">
-                                        <img src="https://cdn-icons-png.flaticon.com/128/10337/10337458.png?ga=GA1.1.1101431490.1697648101&semt=ais" alt="edit btn"
-                                            className="p-2 w-14 h-14 mx-auto hover:scale-125"
-                                        />
+
+
+                                    {/* current_position */}
+                                    <td className=" border-b border-gray-200  px-5 py-8 text-sm">
+                                        <div className="flex items-center gap-3 justify-start">
+
+                                            <p className="font-medium   text-xl bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-400 
+                                                      text-transparent bg-clip-text">
+                                                {item?.current_position}
+                                            </p>
+                                        </div>
                                     </td>
-                                    {/* delete */}
-                                    <td className="border-b  border-gray-200  text-sm">
-                                        <img src="https://cdn-icons-png.flaticon.com/128/10337/10337170.png?ga=GA1.1.1101431490.1697648101&semt=ais" alt="delete btn"
-                                            className="p-2 w-14 mx-auto h-14 hover:scale-125"
-                                        />
+                                    {/* owner-Hr */}
+                                    <td className=" border-b border-gray-200  px-5 py-8 text-sm">
+                                        <div className="flex items-center gap-3 justify-start">
+
+                                            <p className="font-medium   text-xl bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-400 
+                                                      text-transparent bg-clip-text">
+                                                {item?.owner_hr}
+                                            </p>
+                                        </div>
                                     </td>
+
+                                    {/* status */}
+                                    <td className=" border-b border-gray-200  px-5 py-8 text-sm">
+                                        <div className="flex items-center gap-3 justify-start">
+
+                                            <p className="font-medium   text-xl bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-400 
+                                                      text-transparent bg-clip-text">
+                                                {item?.status}
+                                            </p>
+                                        </div>
+                                    </td>
+                                    {/* updated date*/}
+                                    <td className=" border-b border-gray-200  px-5 py-8 text-sm">
+                                        <div className="flex items-center gap-3 justify-start">
+
+                                            <p className="font-medium   text-xl bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-400 
+                                                      text-transparent bg-clip-text">
+                                                {item?.updated}
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                    {/* updated date*/}
+                                    <td className=" border-b border-gray-200  px-5 py-8 text-sm">
+                                        <div className="flex items-center gap-3 justify-start">
+
+                                            <p className="font-medium   text-xl bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-400 
+                                                      text-transparent bg-clip-text">
+                                                {item?.action}
+                                            </p>
+                                            {/* edit */}
+                                            <td className="border-b px-5 py-8  relative flex justify-center items-center border-gray-200  text-sm">
+                                                <img src="https://cdn-icons-png.flaticon.com/128/10337/10337458.png?ga=GA1.1.1101431490.1697648101&semt=ais" alt="edit btn"
+                                                    className="p-2 w-14 h-14 mx-auto hover:scale-125"
+                                                />
+                                                {item?.action}
+                                            </td>
+                                            {/* delete */}
+                                            <td className="border-b  border-gray-200  text-sm">
+                                                <img src="https://cdn-icons-png.flaticon.com/128/10337/10337170.png?ga=GA1.1.1101431490.1697648101&semt=ais" alt="delete btn"
+                                                    className="p-2 w-14 mx-auto h-14 hover:scale-125"
+                                                />
+                                                {item?.action}
+                                            </td>
+                                        </div>
+                                    </td>
+
+
                                 </tr>
                             )
                         })}

@@ -4,7 +4,8 @@ import Candidate from './Candidate'
 
 const CandidateList = () => {
     const listForms = [
-        { name: "aasd", phone: "03242304", updatedData: "" }
+        { name: "aasd",email:"thinhdeptrai@gmail.com", phone: "03242304",current_position: "Developer",
+        owner_hr:"thinhdeptrai1", status:"Waiting for interview" ,action: "" }
 
     ]
 

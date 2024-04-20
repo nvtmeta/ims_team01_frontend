@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react'
+import { FiHome } from 'react-icons/fi';
 import { HiOutlineChatAlt2, HiOutlineClipboardList } from 'react-icons/hi';
 import { HiBriefcase, HiMiniUserGroup } from 'react-icons/hi2';
 import { PiAddressBook } from 'react-icons/pi';
@@ -11,8 +12,8 @@ import { VscAccount } from 'react-icons/vsc';
 export const menuLink = [
     {
         id: 1,
-        name: 'Dashboard',
-        icon: <HiOutlineClipboardList />,
+        name: 'Home',
+        icon: <FiHome />,
         slug: '/dashboard'
     },
     {

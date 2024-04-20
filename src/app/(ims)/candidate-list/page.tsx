@@ -1,20 +1,20 @@
+"use client"
+
+
 import { Avatar, BreadcrumbItem, Breadcrumbs, Chip, Tooltip } from '@nextui-org/react'
-import React from 'react'
-import Candidate from './Candidate'
+import React, { useState } from 'react'
+import CandidateList from './CandidateList'
+import CandidateCreate from './CandidateCreate'
 
-const CandidateList = () => {
-    const listForms = [
-        { name: "aasd",email:"thinhdeptrai@gmail.com", phone: "03242304",current_position: "Developer",
-        owner_hr:"thinhdeptrai1", status:"Waiting for interview" ,action: "" }
+const CandidatePage = () => {
 
-    ]
-
+    const [displayPage, setDisplayPage] = useState('list')
     return (
         <div>
-
-            <Candidate listForms={listForms} />
+            {displayPage == "list" && <CandidateList setDisplayPage={setDisplayPage} />}
+            {displayPage == "ADD" && <CandidateCreate setDisplayPage={setDisplayPage} />}
         </div>
     )
 }
 
-export default CandidateList
+export default CandidatePage

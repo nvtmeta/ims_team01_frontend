@@ -10,11 +10,12 @@ export default function DashboardLayout({
 }) {
     return (
         <section>
-            {/* Include shared UI here e.g. a header or sidebar */}
-            <NavBar />
-            <div className='flex gap-3'>
+            <div className='flex '>
                 <Sidebar />
-                {children}
+                <div className='w-full'>
+                    <NavBar />
+                    {children}
+                </div>
             </div>
         </section>
     )

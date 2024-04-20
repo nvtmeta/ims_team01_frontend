@@ -2,6 +2,8 @@
 
 import { BreadcrumbItem, Breadcrumbs, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input } from '@nextui-org/react'
 import React from 'react'
+import { IoMdArrowDropdown } from 'react-icons/io'
+import { MdKeyboardArrowDown } from 'react-icons/md'
 
 const Candidate = ({ listForms }: any) => {
     return (
@@ -9,34 +11,45 @@ const Candidate = ({ listForms }: any) => {
             <Breadcrumbs className='mx-6 mb-4' variant='solid' radius='full'>
                 <BreadcrumbItem size='lg' className='font-bold'>Candidate List</BreadcrumbItem>
             </Breadcrumbs>
-            <div className='m-10 bg-white rounded-2xl p-3 flex items-center gap-2'>
-                <Input
-                    label="Search"
-                    isClearable
-                    radius="lg"
-                    className='w-96'
-                    placeholder="Type to search..."
-                    startContent={
-                        <SearchIcon className="text-black/50 mb-0.5  text-white pointer-events-none flex-shrink-0" />
-                    }
-                />
-                <Dropdown>
-                    <DropdownTrigger>
-                        <Button
-                            variant="bordered"
-                        >
-                            Open Menu
-                        </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu aria-label="Static Actions">
-                        <DropdownItem key="new">New file</DropdownItem>
-                        <DropdownItem key="copy">Copy link</DropdownItem>
-                        <DropdownItem key="edit">Edit file</DropdownItem>
-                        <DropdownItem key="delete" className="text-danger" color="danger">
-                            Delete file
-                        </DropdownItem>
-                    </DropdownMenu>
-                </Dropdown>
+            <div className='m-6 bg-white rounded-2xl p-3 flex items-center justify-between gap-2'>
+                <div className='flex gap-2'>
+                    <Input
+                        size='lg'
+                        isClearable
+                        radius="lg"
+                        className='w-96 bg-slate-100 rounded-xl'
+                        placeholder="Type to search..."
+                        startContent={
+                            <SearchIcon className="text-black/50 mb-0.5  text-white pointer-events-none flex-shrink-0" />
+                        }
+                    />
+                    <Dropdown>
+                        <DropdownTrigger>
+                            <Button size='lg' className='bg-slate-100 p-3 w-64 justify-between rounded-xl flex gap-2 items-center'>
+                                <p className='font-medium'>Status</p>
+                                <MdKeyboardArrowDown className='text-4xl font-bold' />
+                            </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu aria-label="Static Actions">
+                            <DropdownItem key="new">New file</DropdownItem>
+                            <DropdownItem key="copy">Copy link</DropdownItem>
+                            <DropdownItem key="edit">Edit file</DropdownItem>
+                            <DropdownItem key="delete" className="text-danger" color="danger">
+                                Delete file
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+
+                    {/* search */}
+                    <Button size='lg' className=' font-medium p-4 bg-gray-500 text-white '>
+                        Search
+                    </Button>
+                </div>
+
+                {/* search */}
+                <Button size='lg' className='bg-gradient-to-r w-44 from-sky-400 to-blue-500 font-medium p-4 text-white '>
+                    Add new
+                </Button>
             </div>
             <div className='bg-white p-10 m-6 rounded-3xl'>
                 <table className="w-full ">

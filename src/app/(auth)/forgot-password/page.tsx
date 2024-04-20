@@ -35,14 +35,12 @@ const ForgotPassPage = () => {
                                     text-center align-middle text-sm text-white shadow font-bold
                                     hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600
                                  focus:bg-indigo-600 focus:text-white focus:shadow-none">
-
                                     Send
                                 </button>
-                                <button className="grid  cursor-pointer select-none rounded-md border 
-                                    bg-gradient-to-r from-sky-400 to-red-500 bg-indigo-500 py-2 px-5 
-                                    text-center align-middle text-sm text-white shadow font-bold
-                                    hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600
-                                 focus:bg-indigo-600 focus:text-white focus:shadow-none">Cancel</button>
+                                <button className="grid  cursor-pointer select-none rounded-md 
+                                         py-2 px-5 
+                                    text-center align-middle text-sm text-black hover:bg-slate-100   font-bold
+                                      focus:shadow-none">Cancel</button>
                             </div>
 
 

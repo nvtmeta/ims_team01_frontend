@@ -2,12 +2,18 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, User, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import { IoIosLogOut } from "react-icons/io";
+import { usePathname } from "next/navigation";
+import { menuLink } from "./Sidebar";
 
 const NavBar = () => {
+
+    const pathname = usePathname();
+    const menuName = menuLink.find(item => item.slug === pathname)?.name;
+
     return (
-        <div className="flex  bg-gradient-to-r from-sky-300 to-blue-300 bg-indigo-300 
+        <div className="flex  backdrop-blur-sm bg-white 
         p-4  items-center justify-between ">
-            <p className="font-bold text-white text-3xl">DASHBOARD</p>
+            <p className="font-bold text-black text-3xl">{menuName}</p>
             <div className="flex items-center gap-4">
                 <Dropdown placement="bottom-start">
                     <DropdownTrigger>

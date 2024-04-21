@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiHome } from 'react-icons/fi';
 import { HiOutlineChatAlt2, HiOutlineClipboardList } from 'react-icons/hi';
 import { HiBriefcase, HiMiniUserGroup } from 'react-icons/hi2';
@@ -14,7 +14,7 @@ export const menuLink = [
         id: 1,
         name: 'Home',
         icon: <FiHome />,
-        slug: '/dashboard'
+        slug: '/'
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ export const menuLink = [
     {
         id: 5,
         name: 'Offer',
-        icon: <VscAccount />,
+        icon: <HiOutlineClipboardList />,
         slug: '/offers'
     },
     {
@@ -51,29 +51,43 @@ export const menuLink = [
 
 const Sidebar = () => {
     const [isLinkActive, setLinkActive] = useState('');
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        if (isHovered) {
+            console.log('Mouse over the tracked div!');
+            // You can perform any actions you want here
+        }
+    }, [isHovered]);
+
 
     return (
-        <div className="h-full bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500 ">
-            <div className="h-screen w-64 ">
+        <div
+            onMouseOver={() => setIsHovered(true)}
+            onMouseOut={() => setIsHovered(false)}
+            className="h-full bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500 ">
+            <div className={`h-screen transition-width w-64 ${isHovered ? 'w-64 transition-all' : 'w-20 transition-all'} `}>
                 <div className="flex h-full flex-grow flex-col overflow-y-auto   bg-white pt-5 shadow-md">
-                    <div className="flex gap-3  items-center px-4 ml-10">
+                    <Link onClick={() => setLinkActive("/")} href={"/"} className={`flex gap-3  items-center px-4  ${isHovered && 'ml-10 transition-all'}`}>
                         <img className="h-12 w-auto max-w-full align-middle" src="https://cdn-icons-png.freepik.com/256/13065/13065925.png?ga=GA1.1.1725227974.1708702988&semt=ais_hybrid" alt="" />
-                        <span className='font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500
-                        text-transparent bg-clip-text text-3xl
-                        '>IMS</span>
-                    </div>
+                        {isHovered && <span className='font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500
+                        text-transparent bg-clip-text text-3xl transition-all
+                        '>IMS</span>}
+                    </Link>
 
                     <div className="flex mt-3 ml-2 flex-1 flex-col">
-                        <nav className="flex-1 mt-8 flex gap-2 flex-col">
+                        <nav className="flex-1 mt-8 flex gap-5 flex-col">
                             {menuLink.map((item, index) => (
                                 <Link key={index} onClick={() => setLinkActive(item.slug)}
-                                    href={item.slug} title="" className={`flex cursor-pointer py-3 items-center
-                                     px-4 text-xl font-medium text-blue-500 outline-none transition-all 
+                                    href={item.slug} title="" className={`flex cursor-pointer py-3 items-center transition-all
+                                     px-4 text-xl font-medium text-blue-500 outline-none 
                                       duration-100 ease-in-out focus:border-l-4 ${isLinkActive === item.slug ? 'border-l-4 border-blue-500 bg-slate-50' : ''}`}>
-                                    <span className='mr-2'>
+                                    <span className='mr-2 text-2xl transition-all'>
                                         {item.icon}
                                     </span>
-                                    {item.name}
+                                    <span className='transition-all'>
+                                        {isHovered && item.name}
+                                    </span>
                                 </Link>
                             ))}
                         </nav>

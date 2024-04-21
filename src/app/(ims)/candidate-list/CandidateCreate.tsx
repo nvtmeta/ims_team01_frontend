@@ -44,7 +44,7 @@ const CandidateCreate = ({ setDisplayPage }: any) => {
                 <BreadcrumbItem size='lg' className='font-bold'>Create candidate</BreadcrumbItem>
             </Breadcrumbs>
             {/* personal info */}
-            <div className='mx-10 p-6 rounded-xl bg-white'>
+            <form className='mx-10 p-6 rounded-xl bg-white'>
                 <p className='text-blue-500 font-medium mb-4 text-xl'>I. Personal Information</p>
                 <div className='flex justify-between'>
                     {/* left */}
@@ -54,6 +54,7 @@ const CandidateCreate = ({ setDisplayPage }: any) => {
                                 <span className='text-red-500 '>*</span>
                             </label>
                             <input
+                                required
                                 name='fullName'
                                 placeholder="Type a name..."
                                 className="ml-4 border-1 p-3 mt-3
@@ -291,8 +292,25 @@ const CandidateCreate = ({ setDisplayPage }: any) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div >
+
+
+                {/* submit */}
+                <div className="flex justify-center mt-10 space-x-2">
+                    <Button type='submit' size='lg' className="grid  cursor-pointer select-none rounded-md border 
+                                    bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500 py-2 px-5 
+                                    text-center align-middle text-sm text-white shadow font-bold
+                                    hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600
+                                 focus:bg-indigo-600 focus:text-white focus:shadow-none">
+                        Submit
+                    </Button>
+                    <Button onPress={() => setDisplayPage("list")} size='lg' className="grid  cursor-pointer select-none rounded-md 
+                                         py-2 px-5 
+                                    text-center align-middle text-sm text-black hover:bg-slate-100   font-bold
+                                      focus:shadow-none">Cancel</Button>
+                </div>
+
+            </form>
+        </div>
     )
 }
 

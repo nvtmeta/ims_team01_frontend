@@ -14,7 +14,7 @@ export default function DashboardLayout({
 
     return (
         <section>
-            <div className='flex bg-[#f5f5f7]'>
+            <div className='flex h-full bg-[#f5f5f7]'>
                 <Sidebar />
                 <div className='w-full'>
                     <NavBar />

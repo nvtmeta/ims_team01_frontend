@@ -65,8 +65,8 @@ const Sidebar = () => {
         <div
             onMouseOver={() => setIsHovered(true)}
             onMouseOut={() => setIsHovered(false)}
-            className="h-full bg-gradient-to-r from-sky-400 to-blue-500 bg-indigo-500 ">
-            <div className={`h-screen transition-width w-64 ${isHovered ? 'w-64 transition-all' : 'w-20 transition-all'} `}>
+            className="min-h-[50rem]  bg-[#f5f5f7]">
+            <div className={`h-full  transition-width ${isHovered ? 'w-64 transition-all' : 'w-20 transition-all'} `}>
                 <div className="flex h-full flex-grow flex-col overflow-y-auto   bg-white pt-5 shadow-md">
                     <Link onClick={() => setLinkActive("/")} href={"/"} className={`flex gap-3  items-center px-4  ${isHovered && 'ml-10 transition-all'}`}>
                         <img className="h-12 w-auto max-w-full align-middle" src="https://cdn-icons-png.freepik.com/256/13065/13065925.png?ga=GA1.1.1725227974.1708702988&semt=ais_hybrid" alt="" />
@@ -80,7 +80,7 @@ const Sidebar = () => {
                             {menuLink.map((item, index) => (
                                 <Link key={index} onClick={() => setLinkActive(item.slug)}
                                     href={item.slug} title="" className={`flex cursor-pointer py-3 items-center transition-all
-                                     px-4 text-xl font-medium text-blue-500 outline-none 
+                                     px-4 text-xl font-medium text-blue-500 outline-none  h-16
                                       duration-100 ease-in-out focus:border-l-4 ${isLinkActive === item.slug ? 'border-l-4 border-blue-500 bg-slate-50' : ''}`}>
                                     <span className='mr-2 text-2xl transition-all'>
                                         {item.icon}
@@ -88,6 +88,7 @@ const Sidebar = () => {
                                     <span className='transition-all'>
                                         {isHovered && item.name}
                                     </span>
+
                                 </Link>
                             ))}
                         </nav>
